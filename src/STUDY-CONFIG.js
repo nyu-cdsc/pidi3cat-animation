@@ -19,10 +19,28 @@ var forms = {
     }
   ]
 }
-var startGame = [
+var startGame_gen = [
   {
     type: 'action',
-    id: 'startGame',
+    id: 'generic',
+    stimuli: [
+      {
+        type: 'picture',
+        parameters: {
+          filename: '../../../assets/sample/start.jpeg',
+          coordinates: [
+            { value: 'started', shape: "rect", coordinates: "0, 0, 5000, 5000" },
+          ]
+        },
+      }
+    ]
+  },
+]
+
+var startGame_spec = [
+  {
+    type: 'action',
+    id: 'specific',
     stimuli: [
       {
         type: 'picture',
@@ -774,7 +792,7 @@ var end = [
 
 var generic_toma1 = [
   forms,
-  startGame,
+  startGame_gen,
   intro,
   attn_check_intro,
   attn_check,
@@ -795,7 +813,7 @@ var generic_toma1 = [
 
 var generic_toma2 = [
   forms,
-  startGame,
+  startGame_gen,
   intro,
   attn_check_intro,
   attn_check,
@@ -816,7 +834,7 @@ var generic_toma2 = [
 
 var specific_toma1 = [
   forms,
-  startGame,
+  startGame_spec,
   intro,
   attn_check_intro,
   attn_check,
@@ -837,7 +855,7 @@ var specific_toma1 = [
 
 var specific_toma2 = [
   forms,
-  startGame,
+  startGame_spec,
   intro,
   attn_check_intro,
   attn_check,
